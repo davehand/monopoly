@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150403002709) do
+=======
+ActiveRecord::Schema.define(version: 20150403005852) do
+>>>>>>> add created user id to games. ui updates to game show
 
   create_table "games", force: :cascade do |t|
     t.integer  "current_player_id"
@@ -19,6 +23,10 @@ ActiveRecord::Schema.define(version: 20150403002709) do
     t.integer  "free_parking_pot"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+<<<<<<< HEAD
+=======
+    t.integer  "created_user_id"
+>>>>>>> add created user id to games. ui updates to game show
   end
 
   create_table "players", force: :cascade do |t|
@@ -35,10 +43,21 @@ ActiveRecord::Schema.define(version: 20150403002709) do
   end
 
   create_table "users", force: :cascade do |t|
+<<<<<<< HEAD
     t.string   "email",           null: false
     t.string   "password_digest", null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
 
+=======
+    t.string   "email",      null: false
+    t.string   "password",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email"
+
+>>>>>>> add created user id to games. ui updates to game show
 end
