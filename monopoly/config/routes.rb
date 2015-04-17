@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :games do
         member do
           get 'roll_dice'
+          get 'respond_to_property_purchase'
         end
       end
       resources :board_spaces
