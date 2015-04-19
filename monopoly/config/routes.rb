@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       end
       resources :board_spaces
       resources :players
+      resources :users
     end
   end
 
