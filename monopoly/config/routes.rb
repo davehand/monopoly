@@ -9,7 +9,11 @@ Rails.application.routes.draw do
         end
       end
       resources :board_spaces
-      resources :players
+      resources :players do 
+        member do
+          get 'pay_out_of_jail'
+        end
+      end
       resources :users
     end
   end
