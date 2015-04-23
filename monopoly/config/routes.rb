@@ -6,6 +6,7 @@ Rails.application.routes.draw do
         member do
           get 'roll_dice'
           get 'respond_to_property_purchase'
+          get 'respond_to_income_tax'
         end
       end
       resources :board_spaces
